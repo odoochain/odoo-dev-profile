@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo noupdate="1">
+
+<record id="base.user_demo" model="res.users">
+    <field name="groups_id" eval="[(4, ref('product.group_uom')), (4, ref('product.group_stock_packaging')), (4, ref('stock.group_production_lot')), (4, ref('stock.group_tracking_lot')), (4, ref('stock.group_stock_multi_locations')), (4, ref('stock.group_stock_multi_warehouses')),(4, ref('stock.group_adv_location')), (4, ref('stock_account.group_inventory_valuation')), (4, ref('sale.group_delivery_invoice_address')), (4, ref('sale.group_discount_per_so_line')), (4, ref('product.group_sale_pricelist')), (4, ref('product.group_product_pricelist')), (4, ref('purchase.group_manage_vendor_price')), (4, ref('analytic.group_analytic_accounting')), (4, ref('sale.group_analytic_accounting')), (4, ref('purchase.group_analytic_accounting')), (4, ref('base.group_multi_currency')), (4, ref('product.group_mrp_properties')), (4, ref('crm.group_use_lead')), (4, ref('sale.group_display_incoterm'))]"/>
+</record>
+
+</odoo>

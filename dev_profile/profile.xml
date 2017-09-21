@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo noupdate="1">
+
+<!--
+base.group_multi_currency = Multi-currency
+base.group_multi_company = Multi Companies
+base.group_no_one = Technical Features
+product.group_uom = Manage Multiple Units of Measure
+product.group_uos = Manage Secondary Unit of Measure
+stock.group_production_lot = Manage serial numbers
+stock.group_stock_multi_locations = Manage multiple locations
+stock.group_stock_multi_warehouses = Manage multiple warehouses
+stock.group_adv_location = Manage Push and Pull inventory flows
+# On a besoin de stock.group_tracking_lot même si on ne l'utilise pas,
+car le group "tracability sur la vue form des stock.move, qui contient à
+la fois le prodlot et le tracking appartient au groupe stock.group_tracking_lot
+stock.group_tracking_lot = Manage Packages
+stock_account.group_inventory_valuation = Manage Inventory Valuation
+sale.group_discount_per_so_line = Discount on lines
+sale.group_display_incoterm = Afficher les incotermes sur les ordres de vente et les factures liées
+sale_stock.group_route_so_lines = Permettre les routes par ligne de commande
+product.group_product_pricelist = Pricelists On Product
+product.group_sale_pricelist
+product.group_purchase_pricelist
+analytic.group_analytic_accounting
+sale.group_analytic_accounting
+purchase.group_analytic_accounting
+sale.group_mrp_properties = Properties on lines
+project.group_time_work_estimation_tasks = Time Estimation on Tasks
+product.group_mrp_properties = Manage properties on product
+
+-->
+
+<record id="base.user_root" model="res.users">
+    <field name="groups_id" eval="[(4, ref('product.group_uom')), (4, ref('product.group_stock_packaging')), (4, ref('stock.group_production_lot')), (4, ref('stock.group_tracking_lot')), (4, ref('stock.group_stock_multi_locations')), (4, ref('stock.group_stock_multi_warehouses')),(4, ref('stock.group_adv_location')), (4, ref('stock_account.group_inventory_valuation')), (4, ref('base.group_no_one')), (4, ref('sale.group_delivery_invoice_address')), (4, ref('sale.group_discount_per_so_line')), (4, ref('product.group_sale_pricelist')), (4, ref('product.group_product_pricelist')), (4, ref('purchase.group_manage_vendor_price')), (4, ref('analytic.group_analytic_accounting')), (4, ref('sale.group_analytic_accounting')), (4, ref('purchase.group_analytic_accounting')), (4, ref('sale.group_mrp_properties')), (4, ref('base.group_multi_currency')), (4, ref('product.group_mrp_properties')), (4, ref('crm.group_use_lead')), (4, ref('sale.group_display_incoterm'))]"/>
+</record>
+
+<record id="install_lang_fr" model="base.language.install">
+    <field name="lang">fr_FR</field>
+    <field name="state">done</field>
+    <field name="overwrite" eval="1"/>
+</record>
+
+<function
+    model="base.language.install"
+    name="lang_install"
+    eval="[[ref('install_lang_fr')]]"/>
+
+<record id="point_of_sale.pos_config_main" model="pos.config">
+    <field name="proxy_ip">posbox:7069</field>
+    <field name="iface_print_via_proxy" eval="True"/>
+</record>
+
+<record id="base.main_company" model="res.company">
+    <field name="currency_id" ref="base.EUR"/>
+</record>
+<!--
+
+http://help.openerp.com/question/34430/why-configuring-chart-via-web-succeed-and-failed-with-xml-duplicate-key-for-taxes/
+
+<record id="install_account_fr_first_step" model="account.installer">
+    <field name="charts">l10n_fr</field>
+    <field name="company_id" ref="base.main_company" />
+</record>
+
+<function
+    model="account.installer"
+    name="action_next"
+    eval="[[ref('install_account_fr_first_step')]]"
+    />
+
+-->
+
+</odoo>
