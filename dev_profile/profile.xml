@@ -6,7 +6,7 @@
 base.group_multi_currency = Multi-currency
 base.group_multi_company = Multi Companies
 base.group_no_one = Technical Features
-product.group_uom = Manage Multiple Units of Measure
+uom.group_uom = Manage Multiple Units of Measure
 product.group_uos = Manage Secondary Unit of Measure
 stock.group_production_lot = Manage serial numbers
 stock.group_stock_multi_locations = Manage multiple locations
@@ -32,8 +32,8 @@ product.group_mrp_properties = Manage properties on product
 
 -->
 
-<record id="base.user_root" model="res.users">
-    <field name="groups_id" eval="[(4, ref('product.group_uom')), (4, ref('product.group_stock_packaging')), (4, ref('stock.group_production_lot')), (4, ref('stock.group_tracking_lot')), (4, ref('stock.group_stock_multi_locations')), (4, ref('stock.group_stock_multi_warehouses')),(4, ref('stock.group_adv_location')), (4, ref('stock_account.group_inventory_valuation')), (4, ref('base.group_no_one')), (4, ref('sale.group_delivery_invoice_address')), (4, ref('sale.group_discount_per_so_line')), (4, ref('product.group_sale_pricelist')), (4, ref('product.group_product_pricelist')), (4, ref('purchase.group_manage_vendor_price')), (4, ref('analytic.group_analytic_accounting')), (4, ref('sale.group_analytic_accounting')), (4, ref('purchase.group_analytic_accounting')), (4, ref('sale.group_mrp_properties')), (4, ref('base.group_multi_currency')), (4, ref('product.group_mrp_properties')), (4, ref('crm.group_use_lead')), (4, ref('sale.group_display_incoterm'))]"/>
+<record id="base.user_admin" model="res.users">
+     <field name="groups_id" eval="[(4, ref('uom.group_uom')), (4, ref('product.group_stock_packaging')), (4, ref('stock.group_production_lot')), (4, ref('stock.group_tracking_lot')), (4, ref('stock.group_stock_multi_locations')), (4, ref('stock.group_stock_multi_warehouses')),(4, ref('stock.group_adv_location')), (4, ref('base.group_no_one')), (4, ref('sale.group_delivery_invoice_address')), (4, ref('sale.group_discount_per_so_line')), (4, ref('product.group_sale_pricelist')), (4, ref('product.group_pricelist_item')), (4, ref('purchase.group_manage_vendor_price')), (4, ref('analytic.group_analytic_accounting')), (4, ref('base.group_multi_currency')), (4, ref('crm.group_use_lead')), (4, ref('sale_stock.group_display_incoterm')), (4, ref('account.group_account_user')), (4, ref('account.group_warning_account')), (4, ref('stock.group_warning_stock')), (4, ref('purchase.group_warning_purchase')), (4, ref('sale.group_warning_sale')), (4, ref('base.group_private_addresses')), (4, ref('sale.group_proforma_sales')), (4, ref('stock.group_lot_on_delivery_slip')), (4, ref('sale.group_sale_order_dates')), (4, ref('account.group_fiscal_year'))]"/>
 </record>
 
 <record id="install_lang_fr" model="base.language.install">
@@ -48,12 +48,12 @@ product.group_mrp_properties = Manage properties on product
     eval="[[ref('install_lang_fr')]]"/>
 
 <record id="point_of_sale.pos_config_main" model="pos.config">
-    <field name="proxy_ip">posbox:7069</field>
     <field name="iface_print_via_proxy" eval="True"/>
 </record>
 
 <record id="base.main_company" model="res.company">
     <field name="currency_id" ref="base.EUR"/>
+    <field name="country_id" ref="base.fr"/>
 </record>
 <!--
 
