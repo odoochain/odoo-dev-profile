@@ -5,15 +5,15 @@
 from odoo import models, fields, api
 
 
-class AccountJournal(models.Model):
-    _inherit = 'account.journal'
+#class AccountJournal(models.Model):
+#    _inherit = 'account.journal'
 
-    def init(self):
-        self._cr.execute("UPDATE account_journal SET update_posted=true")
-        return True
+#    def init(self):
+#        self._cr.execute("UPDATE account_journal SET update_posted=true")
+#        return True
 
     # Allow to cancel account moves
-    update_posted = fields.Boolean(default=True)
+#    update_posted = fields.Boolean(default=True)
 
 
 #class BaseLanguageExport(models.TransientModel):

@@ -17,7 +17,7 @@ car le group "tracability sur la vue form des stock.move, qui contient à
 la fois le prodlot et le tracking appartient au groupe stock.group_tracking_lot
 stock.group_tracking_lot = Manage Packages
 stock_account.group_inventory_valuation = Manage Inventory Valuation
-sale.group_discount_per_so_line = Discount on lines
+product.group_discount_per_so_line = Discount on lines
 sale.group_display_incoterm = Afficher les incotermes sur les ordres de vente et les factures liées
 sale_stock.group_route_so_lines = Permettre les routes par ligne de commande
 product.group_product_pricelist = Pricelists On Product
@@ -32,10 +32,13 @@ product.group_mrp_properties = Manage properties on product
 
 -->
 
+        <!--
 <record id="base.user_admin" model="res.users">
-     <field name="groups_id" eval="[(4, ref('uom.group_uom')), (4, ref('product.group_stock_packaging')), (4, ref('stock.group_production_lot')), (4, ref('stock.group_tracking_lot')), (4, ref('stock.group_stock_multi_locations')), (4, ref('stock.group_stock_multi_warehouses')),(4, ref('stock.group_adv_location')), (4, ref('base.group_no_one')), (4, ref('sale.group_delivery_invoice_address')), (4, ref('sale.group_discount_per_so_line')), (4, ref('product.group_sale_pricelist')), (4, ref('product.group_pricelist_item')), (4, ref('purchase.group_manage_vendor_price')), (4, ref('analytic.group_analytic_accounting')), (4, ref('base.group_multi_currency')), (4, ref('crm.group_use_lead')), (4, ref('sale_stock.group_display_incoterm')), (4, ref('account.group_account_user')), (4, ref('account.group_warning_account')), (4, ref('stock.group_warning_stock')), (4, ref('purchase.group_warning_purchase')), (4, ref('sale.group_warning_sale')), (4, ref('base.group_private_addresses')), (4, ref('sale.group_proforma_sales')), (4, ref('stock.group_lot_on_delivery_slip')), (4, ref('sale.group_sale_order_dates')), (4, ref('account.group_fiscal_year'))]"/>
+     <field name="groups_id" eval="[(4, ref('uom.group_uom')), (4, ref('product.group_stock_packaging')), (4, ref('stock.group_production_lot')), (4, ref('stock.group_tracking_lot')), (4, ref('stock.group_stock_multi_locations')), (4, ref('stock.group_stock_multi_warehouses')),(4, ref('stock.group_adv_location')), (4, ref('base.group_no_one')), (4, ref('sale.group_delivery_invoice_address')), (4, ref('product.group_discount_per_so_line')), (4, ref('product.group_sale_pricelist')), (4, ref('product.group_sale_pricelist')), (4, ref('analytic.group_analytic_accounting')), (4, ref('base.group_multi_currency')), (4, ref('crm.group_use_lead')), (4, ref('sale_stock.group_display_incoterm')), (4, ref('account.group_account_user')), (4, ref('account.group_warning_account')), (4, ref('stock.group_warning_stock')), (4, ref('purchase.group_warning_purchase')), (4, ref('sale.group_warning_sale')), (4, ref('base.group_private_addresses')), (4, ref('sale.group_proforma_sales')), (4, ref('stock.group_lot_on_delivery_slip')), (4, ref('account.group_fiscal_year'))]"/>
 </record>
+        -->
 
+<!--
 <record id="install_lang_fr" model="base.language.install">
     <field name="lang">fr_FR</field>
     <field name="state">done</field>
@@ -46,6 +49,7 @@ product.group_mrp_properties = Manage properties on product
     model="base.language.install"
     name="lang_install"
     eval="[[ref('install_lang_fr')]]"/>
+-->
 
 <record id="point_of_sale.pos_config_main" model="pos.config">
     <field name="iface_print_via_proxy" eval="True"/>
