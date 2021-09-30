@@ -23,8 +23,9 @@
         'partner_disable_gravatar',
         'auth_admin_passkey',
         #'web_export_view',
-        #'web_no_bubble',  # plus besoin
-        #'eradicate_quick_create',  # plus besoin, nouveau popup
+        'web_no_bubble',
+        'web_responsive',
+        'eradicate_quick_create',
         'web_dialog_size',
         #'web_translate_dialog',
         'phone_validation',
@@ -43,12 +44,11 @@
         'purchase_commercial_partner',
         'purchase_stock_usability',
         # PROCUREMENT
-        #'procurement_suggest',
         # STOCK
         'sale_stock',
         'stock_usability',
         'stock_account_usability',
-        #'delivery_usability',
+        'delivery_usability',
         # MRP
         'mrp_usability',
         # POS
@@ -56,7 +56,12 @@
         'pos_usability',
         # ACCOUNT
         'account_usability',
+        'account_move_name_sequence',
         'account_menu',
+        'currency_rate_update',
+        'date_range_account',
+        'account_partner_required',
+        'account_analytic_required',
         'l10n_fr_fec_oca',
         'account_fiscal_year',
         'account_financial_report',
@@ -67,7 +72,6 @@
         'account_statement_import_fr_cfonb',
         'account_usability',
         'account_reconciliation_widget',
-        #'account_bank_statement_import_usability',
         'account_fiscal_position_vat_check',
         'account_lock_date_update',
         'l10n_fr_das2',
@@ -78,10 +82,13 @@
         'l10n_fr_intrastat_product',
         'l10n_fr_intrastat_service',
         'l10n_fr_siret',
-        'account_statement_completion_label_simple',
+        'l10n_fr_account_invoice_facturx',
+        'account_invoice_import_facturx',
+        'account_invoice_import_simple_pdf',
+        'account_statement_completion_label_simple_sale',
+        'account_cutoff_start_end_dates',
         #'account_invoice_fiscal_position_update',
         #'account_bank_statement_no_reconcile_guess',
-        #'account_bank_reconciliation_summary_xlsx',
         ],
     'data': [
         'profile.xml',
