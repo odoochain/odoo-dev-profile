@@ -35,7 +35,8 @@
         # SALE
         'sale_crm',
         'sale_management',
-        #'crm_usability',
+        'crm_usability',
+        'sales_team_usability',
         'sale_usability',
         'sale_stock_usability',
         'sale_commercial_partner',
@@ -82,6 +83,7 @@
         'l10n_fr_intrastat_product',
         'l10n_fr_intrastat_service',
         'l10n_fr_siret',
+        'l10n_fr_siret_lookup',
         'l10n_fr_account_invoice_facturx',
         'account_invoice_import_facturx',
         'account_invoice_import_simple_pdf',
