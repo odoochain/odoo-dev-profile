@@ -7,7 +7,7 @@
     'version': '14.0.1.0.0',
     'category': 'Tools',
     'license': 'AGPL-3',
-    'summary': 'Developer Profile',
+    'summary': 'Training Profile',
     'description': """Add modules and set parameters that are usefull to give a training on accounting.
     """,
     'author': 'Akretion',
