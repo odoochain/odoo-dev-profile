@@ -14,7 +14,8 @@
     'website': 'http://www.akretion.com',
     'depends': [
         'dev_profile',
-#        'l10n_fr_account_vat_return',
+        'l10n_fr_account_vat_return_teledec',
+        'account_asset_management',
         'sale_start_end_dates',
         'account_cutoff_start_end_dates',
         'account_cutoff_accrual_picking',
