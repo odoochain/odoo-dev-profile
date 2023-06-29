@@ -19,12 +19,14 @@
         'base_usability',
         'web_dark_mode',
         'mail_usability',
-#        'base_import',
         'base_technical_features',
         'base_company_extension',
         'partner_disable_gravatar',
         'partner_firstname',
-        'partner_bank_acc_type_constraint',
+        # Don't depend on partner_bank_acc_type_constraint
+        # because it blocks the demo data of account_statement_import_file
+        # and probably other modules
+        #'partner_bank_acc_type_constraint',
         'auth_admin_passkey',
         'web_no_bubble',
         'web_responsive',
@@ -40,7 +42,6 @@
         'sale_crm',
         'sale_management',
         'crm_usability',
- #       'sales_team_usability',
         'sale_usability',
         'sale_stock_usability',
         'sale_commercial_partner',
@@ -96,6 +97,7 @@
         'account_invoice_import_simple_pdf',
         'account_statement_completion_label_simple_sale',
         'account_cutoff_start_end_dates',
+        'l10n_fr_account_vat_return_teledec',
         #'account_invoice_fiscal_position_update',
         ],
     'data': [
